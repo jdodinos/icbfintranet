@@ -925,7 +925,7 @@ display:
             edit_node: '0'
             field_date: '0'
             title: '0'
-          optionset: default
+          optionset: news_outstanding
           class: ''
           image: ''
           link: ''
@@ -939,7 +939,7 @@ display:
           grid_medium: ''
           grid_small: ''
           style: ''
-          skin: fullwidth
+          skin: boxed
           overridables:
             arrows: '0'
             autoplay: '0'

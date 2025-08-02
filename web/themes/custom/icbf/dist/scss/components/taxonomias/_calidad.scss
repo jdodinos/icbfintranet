@@ -1,111 +1,115 @@
 .taxonomia_calidad {
     h2 {
-    font-weight: 600;
-    font-family: 'Montserrat-regular';
-    margin: 2rem 0
+        font-weight: 600;
+        font-family: 'Montserrat-regular';
+        margin: 2rem 0
     }
-    p, span {
+
+    p,
+    span {
         font-size: 14px;
         font-family: 'montserrat-regular';
         color: #242424;
         ;
     }
+
     .qa-word {
-          a {
+        a {
             font-size: 18px;
             font-weight: 500;
             font-family: 'Montserrat';
             margin: .5em auto;
         }
-      }
+    }
 
     .az-element.az-html.text-right a {
         font-family: "Montserrat";
         margin: 1rem 0;
     }
-    
+
     a.btn-1519-2 {
         font-family: "'Montserrat'";
     }
 }
+
 .tabs-left {
-     ul.nav.nav-tabs {
+    ul.nav.nav-tabs {
         float: left;
         margin-right: 19px;
         border: 1px solid #ddd;
         border-bottom: none !important;
         padding-bottom: 20px;
         width: 220px;
-    }  
-    
+    }
+
     a {
         min-width: 74px;
         margin-bottom: 3px;
         margin-right: -1px;
         border-radius: 4px 0 0 4px;
         font-size: 16px;
-    } 
+    }
+
     li {
         width: 100%;
         margin: 0.5rem 0;
     }
 }
 
-.bootstrap-tabs-processed{
+.bootstrap-tabs-processed {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 1fr;
     gap: 1rem;
-    #views-bootstrap-referentes-nacional-block-refqa{
-       img.img-fluid {
+
+    #views-bootstrap-referentes-nacional-block-refqa {
+        img.img-fluid {
             width: 57px;
         }
-         a {
+
+        a {
             min-width: 74px;
             margin-bottom: 3px;
             margin-right: -1px;
             border-radius: 4px 0 0 4px;
             font-size: 18px;
-        } 
+        }
     }
 
-     ul.nav.nav-tabs {
-         float: left;
-         margin-right: 19px;
-         border: 0px solid #ddd;
-         border-bottom: none !important;
-         padding-bottom: 20px;
-         width: 220px;
-    }  
-    
+    ul.nav.nav-tabs {
+        float: left;
+        margin-right: 19px;
+        border: 0px solid #ddd;
+        border-bottom: none !important;
+        padding-bottom: 20px;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
     a {
         min-width: 74px;
         margin-bottom: 3px;
         margin-right: -1px;
         border-radius: 4px 0 0 4px;
         font-size: 16px;
-    } 
+    }
+
     li {
         width: 100%;
         margin: .5rem 0;
         padding: 0.5rem;
         height: max-content !important;
-        background: white;
     }
+
     h4.panel-title {
         padding: 10px;
         background: white;
         margin: 3px;
     }
-    
+
     .tab-content {
         border: 1px solid #dddddd;
         padding: 1rem 2rem;
     }
 }
-
-
-
-
-
-

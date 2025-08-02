@@ -27,6 +27,7 @@ dependencies:
     - 'taxonomy_term:file_category:909f3b25-19c1-4646-9781-b58154352d14'
     - 'taxonomy_term:file_category:a437063f-88a5-4f48-a1ea-9722a510e305'
     - 'taxonomy_term:file_category:a7b36c29-98f5-48db-a1f7-9e808b39df6e'
+    - 'taxonomy_term:file_category:a80f9295-b447-458a-8d7e-31d01a498eb0'
     - 'taxonomy_term:file_category:b9583d9b-5cb8-4175-a3e4-30457957b8de'
     - 'taxonomy_term:file_category:d4965cf0-d90b-49b5-a236-c9de8d6ef01d'
     - 'taxonomy_term:file_category:d5b7f2e3-9c0f-46a7-9a38-6b71d6e42f8e'
@@ -486,7 +487,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 20
+          items_per_page: 50
           total_pages: null
           id: 0
           tags:
@@ -528,20 +529,9 @@ display:
               secondary_open: false
               reset_button_always_show: false
             filter:
-              field_date_value:
-                plugin_id: default
+              field_date_value_2:
+                plugin_id: bef
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-                  hide_label: false
-              field_file_categoria_target_id_1:
-                plugin_id: bef_links
-                advanced:
-                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
@@ -550,6 +540,8 @@ display:
                   is_secondary: false
                   hide_label: false
                 select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
       access:
         type: perm
         options:
@@ -673,7 +665,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: filter-table
+      css_class: filter-multitable
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -2877,13 +2869,538 @@ display:
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_document'
         - 'config:field.storage.node.field_location'
-  block_17:
-    id: block_17
-    display_title: 'Activos Info SGSI'
+  block_16:
+    id: block_16
+    display_title: 'Me Conoces (Semana 2020)'
     display_plugin: block
     position: 1
     display_options:
-      title: 'Matrices Peligros y Riesgos de la SST'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7192
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2021-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2020-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_2_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Filtrar por Fecha de Publicación'
+            description: ''
+            identifier: field_date_value_2
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Enero 2020'
+                operator: between
+                value:
+                  min: '2020-01-01 0:00:00'
+                  max: '2020-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2020'
+                operator: between
+                value:
+                  min: '2020-02-01 0:00:00'
+                  max: '2020-02-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: 'Marzo 2020'
+                operator: between
+                value:
+                  min: '2020-03-01 0:00:00'
+                  max: '2020-03-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: 'Abril 2020'
+                operator: between
+                value:
+                  min: '2020-04-01 0:00:00'
+                  max: '2020-04-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: 'Mayo 2020'
+                operator: between
+                value:
+                  min: '2020-05-01 0:00:00'
+                  max: '2020-05-31 23:59:59'
+                  value: ''
+                  type: date
+              6:
+                title: 'Junio 2020'
+                operator: between
+                value:
+                  min: '2020-06-01 0:00:00'
+                  max: '2020-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2020'
+                operator: between
+                value:
+                  min: '2020-07-01 0:00:00'
+                  max: '2020-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2020'
+                operator: between
+                value:
+                  min: '2020-08-01 0:00:00'
+                  max: '2020-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2020'
+                operator: between
+                value:
+                  min: '2020-09-01 0:00:00'
+                  max: '2020-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2020'
+                operator: between
+                value:
+                  min: '2020-10-01 0:00:00'
+                  max: '2020-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2020'
+                operator: between
+                value:
+                  min: '2020-11-01 0:00:00'
+                  max: '2020-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Diciembre 2020'
+                operator: between
+                value:
+                  min: '2020-12-01 0:00:00'
+                  max: '2020-12-31 23:59:59'
+                  value: ''
+                  type: date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2020)'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
+  block_17:
+    id: block_17
+    display_title: 'Matrices Riesgos SGSI'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'Matrices Riesgos SGSI'
       fields:
         title:
           id: title
@@ -3148,7 +3665,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: Documento
           exclude: false
           alter:
             alter_text: false
@@ -3257,9 +3774,74 @@ display:
           output_url_as_text: false
           absolute: false
       pager:
-        type: none
+        type: full
         options:
           offset: 0
+          pagination_heading_level: h4
+          items_per_page: 33
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              field_date_value:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+              field_location_target_id:
+                plugin_id: bef_links
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
       filters:
         status:
           id: status
@@ -3291,7 +3873,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 7471
+            - 7450
           group: 1
           exposed: false
           expose:
@@ -3373,6 +3955,222 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Filtrar por Fecha de Publicación'
+            description: ''
+            identifier: field_date_value
+            optional: true
+            widget: radios
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: '2025'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '2025'
+                  type: date
+              2:
+                title: '2024'
+                operator: between
+                value:
+                  min: '2024-01-01 00:00:00'
+                  max: '2024-12-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: '2023'
+                operator: between
+                value:
+                  min: '2023-01-01 00:00:00'
+                  max: '2023-12-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: '2022'
+                operator: between
+                value:
+                  min: '2022-01-01 00:00:00'
+                  max: '2022-12-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: '2021'
+                operator: between
+                value:
+                  min: '2021-01-01 00:00:00'
+                  max: '2021-12-31 23:59:59'
+                  value: ''
+                  type: date
+        field_location_target_id:
+          id: field_location_target_id
+          table: node__field_location
+          field: field_location_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            11: 11
+            6194: 6194
+            12: 12
+            6220: 6220
+            14: 14
+            15: 15
+            16: 16
+            17: 17
+            18: 18
+            6276: 6276
+            6280: 6280
+            21: 21
+            22: 22
+            23: 23
+            24: 24
+            25: 25
+            26: 26
+            27: 27
+            28: 28
+            29: 29
+            6348: 6348
+            30: 30
+            31: 31
+            32: 32
+            33: 33
+            34: 34
+            35: 35
+            36: 36
+            37: 37
+            38: 38
+            39: 39
+            40: 40
+            41: 41
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_location_target_id_op
+            label: 'Filtrar por Ubicación'
+            description: ''
+            use_operator: false
+            operator: field_location_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_location_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              migracion: '0'
+              administrador_icbf: '0'
+              comunicaciones: '0'
+              proceso_sige: '0'
+              dit: '0'
+              catalogo_dit: '0'
+              proteccion: '0'
+              juridica: '0'
+              estadisticas: '0'
+              gestion_humana: '0'
+              documentos: '0'
+              builder: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vichada: '0'
+              administrador_infraestructura: '0'
+              regional_vaupes: '0'
+              personas: '0'
+              ejes_sige: '0'
+              centro_de_ayuda: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          vid: locations
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -3380,16 +4178,19 @@ display:
       defaults:
         title: false
         pager: false
+        exposed_form: false
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'Activos Info SGSI'
+      display_description: 'Matrices Riesgos SGSI'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -6573,6 +7374,531 @@ display:
         - 'config:field.storage.node.field_file_categoria'
         - 'config:field.storage.node.field_resume'
         - 'config:field.storage.node.field_section'
+  block_23:
+    id: block_23
+    display_title: 'Me Conoces (Semana 2021)'
+    display_plugin: block
+    position: 1
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7192
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2022-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2021-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_2_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Filtrar por Fecha de Publicación'
+            description: ''
+            identifier: field_date_value_2
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Enero 2021'
+                operator: between
+                value:
+                  min: '2021-01-01 0:00:00'
+                  max: '2021-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2021'
+                operator: between
+                value:
+                  min: '2021-02-01 0:00:00'
+                  max: '2021-02-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: 'Marzo 2021'
+                operator: between
+                value:
+                  min: '2021-03-01 0:00:00'
+                  max: '2021-03-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: 'Abril 2021'
+                operator: between
+                value:
+                  min: '2021-04-01 0:00:00'
+                  max: '2021-04-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: 'Mayo 2021'
+                operator: between
+                value:
+                  min: '2021-05-01 0:00:00'
+                  max: '2021-05-31 23:59:59'
+                  value: ''
+                  type: date
+              6:
+                title: 'Junio 2021'
+                operator: between
+                value:
+                  min: '2021-06-01 0:00:00'
+                  max: '2021-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2021'
+                operator: between
+                value:
+                  min: '2021-07-01 0:00:00'
+                  max: '2021-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2021'
+                operator: between
+                value:
+                  min: '2021-08-01 0:00:00'
+                  max: '2021-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2021'
+                operator: between
+                value:
+                  min: '2021-09-01 0:00:00'
+                  max: '2021-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2021'
+                operator: between
+                value:
+                  min: '2021-10-01 0:00:00'
+                  max: '2021-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2021'
+                operator: between
+                value:
+                  min: '2021-11-01 0:00:00'
+                  max: '2021-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Diciembre 2021'
+                operator: between
+                value:
+                  min: '2021-12-01 0:00:00'
+                  max: '2021-12-31 23:59:59'
+                  value: ''
+                  type: date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2021)'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
   block_24:
     id: block_24
     display_title: 'Sentencias Juridica'
@@ -7067,13 +8393,12 @@ display:
         - 'config:field.storage.node.field_document'
         - 'config:field.storage.node.field_file_categoria'
         - 'config:field.storage.node.field_section'
-  block_4:
-    id: block_4
-    display_title: 'Matrices Riesgos SGSI'
+  block_26:
+    id: block_26
+    display_title: 'Me Conoces (Semana 2022)'
     display_plugin: block
     position: 1
     display_options:
-      title: 'Matrices Riesgos SGSI'
       fields:
         title:
           id: title
@@ -7138,198 +8463,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_section:
-          id: field_section
-          table: node__field_section
-          field: field_section
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_file_categoria:
-          id: field_file_categoria
-          table: node__field_file_categoria
-          field: field_file_categoria
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_document:
           id: field_document
           table: node__field_document
@@ -7338,7 +8471,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Documento
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -7446,57 +8579,6 @@ display:
           text: editar
           output_url_as_text: false
           absolute: false
-      pager:
-        type: none
-        options:
-          offset: 0
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Aplicar
-          reset_button: false
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
-          text_input_required_format: full_html
-          bef:
-            general:
-              autosubmit: true
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_textfield_minimum_length: 3
-              autosubmit_hide: true
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Opciones avanzadas'
-              secondary_open: false
-              reset_button_always_show: false
-            filter:
-              field_date_value:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-                  hide_label: false
-              field_location_target_id:
-                plugin_id: bef_links
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-                  hide_label: false
-                select_all_none: false
       filters:
         status:
           id: status
@@ -7528,7 +8610,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 7450
+            - 7192
           group: 1
           exposed: false
           expose:
@@ -7564,17 +8646,496 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        field_section_target_id:
-          id: field_section_target_id
-          table: node__field_section
-          field: field_section_target_id
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2023-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2022-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_2_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Filtrar por Fecha de Publicación'
+            description: ''
+            identifier: field_date_value_2
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Enero 2022'
+                operator: between
+                value:
+                  min: '2022-01-01 0:00:00'
+                  max: '2022-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2022'
+                operator: between
+                value:
+                  min: '2022-02-01 0:00:00'
+                  max: '2022-02-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: 'Marzo 2022'
+                operator: between
+                value:
+                  min: '2022-03-01 0:00:00'
+                  max: '2022-03-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: 'Abril 2022'
+                operator: between
+                value:
+                  min: '2022-04-01 0:00:00'
+                  max: '2022-04-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: 'Mayo 2022'
+                operator: between
+                value:
+                  min: '2022-05-01 0:00:00'
+                  max: '2022-05-31 23:59:59'
+                  value: ''
+                  type: date
+              6:
+                title: 'Junio 2022'
+                operator: between
+                value:
+                  min: '2022-06-01 0:00:00'
+                  max: '2022-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2022'
+                operator: between
+                value:
+                  min: '2022-07-01 0:00:00'
+                  max: '2022-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2022'
+                operator: between
+                value:
+                  min: '2022-08-01 0:00:00'
+                  max: '2022-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2022'
+                operator: between
+                value:
+                  min: '2022-09-01 0:00:00'
+                  max: '2022-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2022'
+                operator: between
+                value:
+                  min: '2022-10-01 0:00:00'
+                  max: '2022-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2022'
+                operator: between
+                value:
+                  min: '2022-11-01 0:00:00'
+                  max: '2022-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Diciembre 2022'
+                operator: between
+                value:
+                  min: '2022-12-01 0:00:00'
+                  max: '2022-12-31 23:59:59'
+                  value: ''
+                  type: date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2022)'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
+  block_27:
+    id: block_27
+    display_title: 'Me Conoces (Semana 2023)'
+    display_plugin: block
+    position: 1
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 7232
+            - 7192
           group: 1
           exposed: false
           expose:
@@ -7605,13 +9166,103 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          vid: secctions
+          vid: file_category
           type: textfield
           hierarchy: false
           limit: true
           error_message: true
         field_date_value:
           id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2024-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2023-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
           table: node__field_date
           field: field_date_value
           relationship: none
@@ -7627,14 +9278,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_date_value_op
+            operator_id: field_date_value_2_op
             label: 'Fecha (field_date)'
             description: null
             use_operator: false
-            operator: field_date_value_op
+            operator: field_date_value_2_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_date_value
+            identifier: field_date_value_2
             required: false
             remember: false
             multiple: false
@@ -7647,167 +9298,386 @@ display:
           group_info:
             label: 'Filtrar por Fecha de Publicación'
             description: ''
-            identifier: field_date_value
+            identifier: field_date_value_2
             optional: true
-            widget: radios
+            widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
             group_items:
               1:
-                title: '2025'
-                operator: '='
-                value:
-                  min: ''
-                  max: ''
-                  value: '2025'
-                  type: date
-              2:
-                title: '2024'
+                title: 'Enero 2023'
                 operator: between
                 value:
-                  min: '2024-01-01 00:00:00'
-                  max: '2024-12-31 23:59:59'
+                  min: '2023-01-01 0:00:00'
+                  max: '2023-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2023'
+                operator: between
+                value:
+                  min: '2023-02-01 0:00:00'
+                  max: '2023-02-31 23:59:59'
                   value: ''
                   type: date
               3:
-                title: '2023'
+                title: 'Marzo 2023'
                 operator: between
                 value:
-                  min: '2023-01-01 00:00:00'
-                  max: '2023-12-31 23:59:59'
+                  min: '2023-03-01 0:00:00'
+                  max: '2023-03-31 23:59:59'
                   value: ''
                   type: date
               4:
-                title: '2022'
+                title: 'Abril 2023'
                 operator: between
                 value:
-                  min: '2022-01-01 00:00:00'
-                  max: '2022-12-31 23:59:59'
+                  min: '2023-04-01 0:00:00'
+                  max: '2023-04-31 23:59:59'
                   value: ''
                   type: date
               5:
-                title: '2021'
+                title: 'Mayo 2023'
                 operator: between
                 value:
-                  min: '2021-01-01 00:00:00'
-                  max: '2021-12-31 23:59:59'
+                  min: '2023-05-01 0:00:00'
+                  max: '2023-05-31 23:59:59'
                   value: ''
                   type: date
-        field_location_target_id:
-          id: field_location_target_id
-          table: node__field_location
-          field: field_location_target_id
+              6:
+                title: 'Junio 2023'
+                operator: between
+                value:
+                  min: '2023-06-01 0:00:00'
+                  max: '2023-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2023'
+                operator: between
+                value:
+                  min: '2023-07-01 0:00:00'
+                  max: '2023-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2023'
+                operator: between
+                value:
+                  min: '2023-08-01 0:00:00'
+                  max: '2023-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2023'
+                operator: between
+                value:
+                  min: '2023-09-01 0:00:00'
+                  max: '2023-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2023'
+                operator: between
+                value:
+                  min: '2023-10-01 0:00:00'
+                  max: '2023-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2023'
+                operator: between
+                value:
+                  min: '2023-11-01 0:00:00'
+                  max: '2023-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Diciembre 2023'
+                operator: between
+                value:
+                  min: '2023-12-01 0:00:00'
+                  max: '2023-12-31 23:59:59'
+                  value: ''
+                  type: date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2023)'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
+  block_28:
+    id: block_28
+    display_title: 'Me Conoces (Semana 2024)'
+    display_plugin: block
+    position: 1
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            11: 11
-            6194: 6194
-            12: 12
-            6220: 6220
-            14: 14
-            15: 15
-            16: 16
-            17: 17
-            18: 18
-            6276: 6276
-            6280: 6280
-            21: 21
-            22: 22
-            23: 23
-            24: 24
-            25: 25
-            26: 26
-            27: 27
-            28: 28
-            29: 29
-            6348: 6348
-            30: 30
-            31: 31
-            32: 32
-            33: 33
-            34: 34
-            35: 35
-            36: 36
-            37: 37
-            38: 38
-            39: 39
-            40: 40
-            41: 41
+            - 7192
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_location_target_id_op
-            label: 'Filtrar por Ubicación'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_location_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_location_target_id
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrador_funcional: '0'
-              content_editor: '0'
-              administrator: '0'
-              migracion: '0'
-              administrador_icbf: '0'
-              comunicaciones: '0'
-              proceso_sige: '0'
-              dit: '0'
-              catalogo_dit: '0'
-              proteccion: '0'
-              juridica: '0'
-              estadisticas: '0'
-              gestion_humana: '0'
-              documentos: '0'
-              builder: '0'
-              regional_amazonas: '0'
-              regional_antioquia: '0'
-              regional_arauca: '0'
-              regional_atlantico: '0'
-              regional_bogota: '0'
-              regional_boyaca: '0'
-              regional_bolivar: '0'
-              regional_caldas: '0'
-              regional_caqueta: '0'
-              regional_casanare: '0'
-              regional_cauca: '0'
-              regional_cesar: '0'
-              regional_choco: '0'
-              regional_cordoba: '0'
-              regional_cundinamarca: '0'
-              regional_la_guajira: '0'
-              regional_guainia: '0'
-              regional_guaviare: '0'
-              regional_huila: '0'
-              regional_magdalena: '0'
-              regional_meta: '0'
-              regional_narino: '0'
-              regional_norte_de_santander: '0'
-              regional_putumayo: '0'
-              regional_quindio: '0'
-              regional_risaralda: '0'
-              regional_san_andres: '0'
-              regional_santander: '0'
-              regional_sucre: '0'
-              regional_tolima: '0'
-              regional_valle: '0'
-              regional_vichada: '0'
-              administrador_infraestructura: '0'
-              regional_vaupes: '0'
-              personas: '0'
-              ejes_sige: '0'
-              centro_de_ayuda: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -7820,24 +9690,272 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: true
-          vid: locations
-          type: select
-          hierarchy: true
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
           limit: true
           error_message: true
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2025-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2024-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_2_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Fecha (field_date)'
+            description: ''
+            identifier: field_date_value_2
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Enero 2024'
+                operator: between
+                value:
+                  min: '2024-01-01 0:00:00'
+                  max: '2024-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2024'
+                operator: between
+                value:
+                  min: '2024-02-01 0:00:00'
+                  max: '2024-02-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: 'Marzo 2024'
+                operator: between
+                value:
+                  min: '2024-03-01 0:00:00'
+                  max: '2024-03-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: 'Abril 2024'
+                operator: between
+                value:
+                  min: '2024-04-01 0:00:00'
+                  max: '2024-04-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: 'Mayo 2024'
+                operator: between
+                value:
+                  min: '2024-05-01 0:00:00'
+                  max: '2024-05-31 23:59:59'
+                  value: ''
+                  type: date
+              6:
+                title: 'Junio 2024'
+                operator: between
+                value:
+                  min: '2024-06-01 0:00:00'
+                  max: '2024-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2024'
+                operator: between
+                value:
+                  min: '2024-07-01 0:00:00'
+                  max: '2024-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2024'
+                operator: between
+                value:
+                  min: '2024-08-01 0:00:00'
+                  max: '2024-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2024'
+                operator: between
+                value:
+                  min: '2024-09-01 0:00:00'
+                  max: '2024-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2024'
+                operator: between
+                value:
+                  min: '2024-10-01 0:00:00'
+                  max: '2024-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2024'
+                operator: between
+                value:
+                  min: '2024-11-01 0:00:00'
+                  max: '2024-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Dociembre 2024'
+                operator: between
+                value:
+                  min: '2024-12-01 0:00:00'
+                  max: '2024-12-31 23:59:59'
+                  value: ''
+                  type: date
       filter_groups:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
       defaults:
-        title: false
-        pager: false
-        exposed_form: false
+        use_ajax: false
+        style: false
+        row: false
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'Matrices Riesgos SGSI'
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2024)'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -7845,12 +9963,536 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_document'
-        - 'config:field.storage.node.field_file_categoria'
-        - 'config:field.storage.node.field_section'
+  block_30:
+    id: block_30
+    display_title: 'Me Conoces (Semana 2025)'
+    display_plugin: block
+    position: 1
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7192
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: '2026-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2025-01-01'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_value_2:
+          id: field_date_value_2
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_2_op
+            label: 'Fecha (field_date)'
+            description: null
+            use_operator: false
+            operator: field_date_value_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Filtrar por Fecha de Publicación'
+            description: ''
+            identifier: field_date_value_2
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Enero 2025'
+                operator: between
+                value:
+                  min: '2025-01-01 0:00:00'
+                  max: '2025-01-31 23:59:59'
+                  value: ''
+                  type: date
+              2:
+                title: 'Febrero 2025'
+                operator: between
+                value:
+                  min: '2025-02-01 0:00:00'
+                  max: '2025-02-31 23:59:59'
+                  value: ''
+                  type: date
+              3:
+                title: 'Marzo 2025'
+                operator: between
+                value:
+                  min: '2025-03-01 0:00:00'
+                  max: '2025-03-31 23:59:59'
+                  value: ''
+                  type: date
+              4:
+                title: 'Abril 2025'
+                operator: between
+                value:
+                  min: '2025-04-01 0:00:00'
+                  max: '2025-04-31 23:59:59'
+                  value: ''
+                  type: date
+              5:
+                title: 'Mayo 2025'
+                operator: between
+                value:
+                  min: '2025-05-01 0:00:00'
+                  max: '2025-05-31 23:59:59'
+                  value: ''
+                  type: date
+              6:
+                title: 'Junio 2025'
+                operator: between
+                value:
+                  min: '2025-06-01 0:00:00'
+                  max: '2025-06-31 23:59:59'
+                  value: ''
+                  type: date
+              7:
+                title: 'Julio 2025'
+                operator: between
+                value:
+                  min: '2025-07-01 0:00:00'
+                  max: '2025-07-31 23:59:59'
+                  value: ''
+                  type: date
+              8:
+                title: 'Agosto 2025'
+                operator: between
+                value:
+                  min: '2025-08-01 0:00:00'
+                  max: '2025-08-31 23:59:59'
+                  value: ''
+                  type: date
+              9:
+                title: 'Septiembre 2025'
+                operator: between
+                value:
+                  min: '2025-09-01 0:00:00'
+                  max: '2025-09-31 23:59:59'
+                  value: ''
+                  type: date
+              10:
+                title: 'Octubre 2025'
+                operator: between
+                value:
+                  min: '2025-10-01 0:00:00'
+                  max: '2025-10-31 23:59:59'
+                  value: ''
+                  type: date
+              11:
+                title: 'Noviembre 2025'
+                operator: between
+                value:
+                  min: '2025-11-01 0:00:00'
+                  max: '2025-11-31 23:59:59'
+                  value: ''
+                  type: date
+              12:
+                title: 'Diciembre 2025'
+                operator: between
+                value:
+                  min: '2025-12-01 0:00:00'
+                  max: '2025-12-31 23:59:59'
+                  value: ''
+                  type: date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_thumbnail
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-6
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Me Conoces (Semana 2025)'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
   block_5:
     id: block_5
     display_title: 'revision direccion'
@@ -9499,4 +12141,555 @@ display:
         - 'config:field.storage.node.field_document'
         - 'config:field.storage.node.field_file_categoria'
         - 'config:field.storage.node.field_resume'
+        - 'config:field.storage.node.field_section'
+  block_9:
+    id: block_9
+    display_title: 'Activos Info SGSI'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'Matrices Peligros y Riesgos de la SST'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_section:
+          id: field_section
+          table: node__field_section
+          field: field_section
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_file_categoria:
+          id: field_file_categoria
+          table: node__field_file_categoria
+          field: field_file_categoria
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Documento
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: editar
+          output_url_as_text: false
+          absolute: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts:
+        field_period_time_target_id:
+          id: field_period_time_target_id
+          table: node__field_period_time
+          field: field_period_time_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            document: document
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7471
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7232
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        use_ajax: false
+        pager: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: 'Activos Info SGSI'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_file_categoria'
         - 'config:field.storage.node.field_section'

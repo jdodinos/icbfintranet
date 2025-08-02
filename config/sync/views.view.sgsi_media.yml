@@ -663,7 +663,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -695,7 +695,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -706,7 +706,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1175,7 +1175,7 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_grid
+        type: views_bootstrap_thumbnail
         options:
           grouping: {  }
           alignment: horizontal
@@ -1183,9 +1183,8 @@ display:
           col_class_custom: ''
           row_class_default: 1
           row_class_custom: ''
-          columns: '3'
           col_xs: col-xs-12
-          col_sm: col-sm-6
+          col_sm: col-sm-12
           col_md: col-md-4
           col_lg: col-lg-4
       row:
@@ -1763,7 +1762,7 @@ display:
             field_resume: '0'
             title: '0'
             field_link_url: '0'
-          optionset: default
+          optionset: news_outstanding
           class: ''
           image: ''
           link: ''
@@ -1777,7 +1776,7 @@ display:
           grid_medium: ''
           grid_small: ''
           style: ''
-          skin: ''
+          skin: boxed
           overridables:
             arrows: '0'
             autoplay: '0'
@@ -2371,7 +2370,7 @@ display:
             field_resume: '0'
             title: '0'
             field_link_url: '0'
-          optionset: default
+          optionset: news_outstanding
           class: ''
           image: ''
           link: ''
@@ -2385,7 +2384,7 @@ display:
           grid_medium: ''
           grid_small: ''
           style: ''
-          skin: ''
+          skin: boxed
           overridables:
             arrows: '0'
             autoplay: '0'
