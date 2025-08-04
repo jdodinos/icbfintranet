@@ -144,12 +144,58 @@ function icbf_preprocess_field(&$variables) {
     if (isset($item['content']['#text'])) {
       $html = $item['content']['#text'];
       // For views in Glazed Builder.
+      // if (strpos($html, 'data-azb="az_view')) {
+      //   $explode_html = explode('</div>', $html);
+      //   foreach ($explode_html as $original_element) {
+      //     if (strpos($original_element, 'data-azb="az_view')) {
+      //       $original_element .= '</div>';
+      //       $element = trim($original_element);
+
+      //       // Check if there are contextual filters.
+      //       $filter = [];
+      //       $pos_contextual_filter = strpos($element, 'data-azat-contextual_filter');
+      //       if ($pos_contextual_filter) {
+      //         $string = substr($element, $pos_contextual_filter);
+      //         $string_array = explode('"', $string);
+      //         $filter = isset($string_array[1]) ? explode('/', $string_array[1]) : [];
+      //       }
+
+      //       // Check if view data.
+      //       $view_data = [];
+      //       $pos_view_info = strpos($element, 'data-azb="az_view');
+      //       $string = substr($element, $pos_view_info);
+      //       $string_array = explode('"', $string);
+      //       $view_data = isset($string_array[1]) ? explode('-', $string_array[1]) : [];
+      //       if (isset($view_data[1]) && isset($view_data[2])) {
+      //         $view = Views::getView($view_data[1]);
+      //         if ($view) {
+      //           $view->setDisplay($view_data[2]);
+
+      //           if (!empty($filter)) {
+      //             $view->setArguments($filter);
+      //           }
+      //           $view->preExecute();
+      //           $view->execute();
+
+      //           // Render it
+      //           $render_array = $view->render();
+      //           $html_view = \Drupal::service('renderer')->render($render_array);
+      //           $html = str_replace($original_element, $html_view, $html);
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   $item['content']['#text'] = $html;
+      // }
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
+
           if (strpos($original_element, 'data-azb="az_view')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if there are contextual filters.
             $filter = [];
@@ -177,37 +223,88 @@ function icbf_preprocess_field(&$variables) {
                 $view->preExecute();
                 $view->execute();
 
-                // Render it
+                // Render it.
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
-                $html = str_replace($original_element, $html_view, $html);
+                $html_view = $element . $html_view . '</div>';
+                $original_element = str_replace($element, $html_view, $original_element);
               }
             }
           }
+          else {
+            $original_element .= '</div>';
+          }
         }
-
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For blocks in Glazed Builder.
+      // if (strpos($html, 'data-azb="az_block')) {
+      //   $explode_html = explode('</div>', $html);
+      //   foreach ($explode_html as $original_element) {
+      //     if (strpos($original_element, 'data-azb="az_block')) {
+      //       $original_element .= '</div>';
+      //       $element = trim($original_element);
+
+      //       // Check if view data.
+      //       $block_data = [];
+      //       $pos_block_info = strpos($element, 'data-azb="az_block');
+      //       $block_class = '';
+      //       if (strpos($element, 'class=') !== FALSE) {
+      //         $elem_array = explode('"', $element);
+      //         if (strpos($elem_array[0], 'class=') !== FALSE) {
+      //           $block_class = $elem_array[1];
+      //         }
+      //       }
+
+      //       $string = substr($element, $pos_block_info);
+      //       $string_array = explode('"', $string);
+      //       foreach ($string_array as $elem_value) {
+      //         if (strpos($elem_value, 'az_block') !== FALSE) {
+      //           $block_id = str_replace('az_block-bean', '', $elem_value);
+      //           $block_id = str_replace('---', '|+|', $block_id);
+      //           $block_id = str_replace('-', ' ', $block_id);
+      //           $block_info = trim(str_replace('|+|', ' - ', $block_id));
+      //           $blocks = \Drupal::entityTypeManager()
+      //             ->getStorage('block_content')
+      //             ->loadByProperties(['info' => $block_info]);
+      //           $block = reset($blocks);
+
+      //           if ($block) {
+      //             $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
+      //             $render_array = $view_builder->view($block);
+      //             if (!isset($render_array['field_builder']['#attributes'])) {
+      //               $render_array['field_builder']['#attributes'] = [];
+      //             }
+      //             if (!isset($render_array['field_builder']['#attributes']['class'])) {
+      //               $render_array['field_builder']['#attributes']['class'] = [];
+      //             }
+
+      //             $render_array['field_builder']['#attributes']['class'][] = $block_class;
+      //             $html_block = \Drupal::service('renderer')->renderRoot($render_array);
+      //             $html = str_replace($original_element, $html_block, $html);
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   $item['content']['#text'] = $html;
+      // }
+
       if (strpos($html, 'data-azb="az_block')) {
+        $html = $item['content']['#text'];
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
           if (strpos($original_element, 'data-azb="az_block')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if view data.
             $block_data = [];
             $pos_block_info = strpos($element, 'data-azb="az_block');
-            $block_class = '';
-            if (strpos($element, 'class=') !== FALSE) {
-              $elem_array = explode('"', $element);
-              if (strpos($elem_array[0], 'class=') !== FALSE) {
-                $block_class = $elem_array[1];
-              }
-            }
-
             $string = substr($element, $pos_block_info);
             $string_array = explode('"', $string);
             foreach ($string_array as $elem_value) {
@@ -216,6 +313,7 @@ function icbf_preprocess_field(&$variables) {
                 $block_id = str_replace('---', '|+|', $block_id);
                 $block_id = str_replace('-', ' ', $block_id);
                 $block_info = trim(str_replace('|+|', ' - ', $block_id));
+
                 $blocks = \Drupal::entityTypeManager()
                   ->getStorage('block_content')
                   ->loadByProperties(['info' => $block_info]);
@@ -224,23 +322,20 @@ function icbf_preprocess_field(&$variables) {
                 if ($block) {
                   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
                   $render_array = $view_builder->view($block);
-                  if (!isset($render_array['field_builder']['#attributes'])) {
-                    $render_array['field_builder']['#attributes'] = [];
-                  }
-                  if (!isset($render_array['field_builder']['#attributes']['class'])) {
-                    $render_array['field_builder']['#attributes']['class'] = [];
-                  }
-
-                  $render_array['field_builder']['#attributes']['class'][] = $block_class;
                   $html_block = \Drupal::service('renderer')->renderRoot($render_array);
-                  $html = str_replace($original_element, $html_block, $html);
+                  $html_view = $element . $html_block . '</div>';
+                  $original_element = str_replace($element, $html_view, $original_element);
                 }
               }
             }
           }
+          else {
+            $original_element .= '</div>';
+          }
         }
 
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       if (strpos($html, 'data-azat-icon="pe')) {
